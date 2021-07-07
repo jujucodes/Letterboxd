@@ -1,0 +1,903 @@
+>>> cd ~/code
+>>> ls
+>>> cd springboard
+>>> cd data
+>>> ls
+>>> cd Capstone2Letterboxd/
+>>> ls
+>>> cd data
+>>> ls
+>>> import pandas as pd
+>>> pd.read_csv('Horror.csv')
+                               title    year  \
+0                            Get Out  2017.0   
+1                         Zombieland  2009.0   
+2                           Suspiria  2018.0   
+3                          Halloween  1978.0   
+4                    Rosemary's Baby  1968.0   
+5             The Cabin in the Woods  2011.0   
+6                     Train to Busan  2016.0   
+7                          The Thing  1982.0   
+8                  Shaun of the Dead  2004.0   
+9                       The Babadook  2014.0   
+10                        Videodrome  1983.0   
+11                 The Invisible Man  2020.0   
+12               10 Cloverfield Lane  2016.0   
+13                        It Follows  2014.0   
+14         What We Do in the Shadows  2014.0   
+15                    It Chapter Two  2019.0   
+16          Night of the Living Dead  1968.0   
+17                      Crimson Peak  2015.0   
+18                      Evil Dead II  1987.0   
+19                               Saw  2004.0   
+20              Let the Right One In  2008.0   
+21                    Velvet Buzzsaw  2019.0   
+22                          Gremlins  1984.0   
+23                           Upgrade  2018.0   
+24                           The Fly  1986.0   
+25                   Happy Death Day  2017.0   
+26                         The Birds  1963.0   
+27     The Rocky Horror Picture Show  1975.0   
+28                          The Host  2006.0   
+29                      Frankenstein  1931.0   
+...                              ...     ...   
+11022                   Ready or Not  2019.0   
+11023   The Texas Chain Saw Massacre  1974.0   
+11024                 The Neon Demon  2016.0   
+11025                         Carrie  1976.0   
+11026                          Mandy  2018.0   
+11027                     Eraserhead  1977.0   
+11028                         Climax  2018.0   
+11029                         Scream  1996.0   
+11030                            Raw  2016.0   
+11031                       Suspiria  1977.0   
+11032                  The Conjuring  2013.0   
+11033                        mother!  2017.0   
+11034                          Split  2016.0   
+11035                     Green Room  2015.0   
+11036                   Annihilation  2018.0   
+11037                      The Other  1972.0   
+11038                American Psycho  2000.0   
+11039                         Psycho  1960.0   
+11040                             It  2017.0   
+11041                          Alien  1979.0   
+11042                      The Witch  2015.0   
+11043                  A Quiet Place  2018.0   
+11044                           Jaws  1975.0   
+11045                     Black Swan  2010.0   
+11046       The Silence of the Lambs  1991.0   
+11047                             Us  2019.0   
+11048                     Hereditary  2018.0   
+11049                    The Shining  1980.0   
+11050                      Midsommar  2019.0   
+11051                 The Lighthouse  2019.0   
+
+                                  director  running_time   views   likes  \
+0                             Jordan Peele           104  605132  261668   
+1                          Ruben Fleischer            88  339357   77110   
+2                          Luca Guadagnino           152  122728   37820   
+3                           John Carpenter            91  212751   59124   
+4                           Roman Polanski           137  158689   46272   
+5                             Drew Goddard            95  274455   63786   
+6                             Yeon Sang-ho           118  164449   49036   
+7                           John Carpenter           109  215480   78005   
+8                             Edgar Wright            99  337012  103412   
+9                            Jennifer Kent            94  218830   46774   
+10                        David Cronenberg            88   84223   22972   
+11                          Leigh Whannell           124  118802   34944   
+12                        Dan Trachtenberg           104  253967   63111   
+13                   David Robert Mitchell           101  235446   62225   
+14           Taika Waititi,Jemaine Clement            86  210944   80476   
+15                         Andy Muschietti           169  196715   38466   
+16                        George A. Romero            96   98428   26133   
+17                      Guillermo del Toro           119  115663   21375   
+18                               Sam Raimi            84  104122   32479   
+19                               James Wan           103  184444   29006   
+20                         Tomas Alfredson           115  104589   28307   
+21                              Dan Gilroy           113   92828    8866   
+22                               Joe Dante           106  170500   35800   
+23                          Leigh Whannell           100   88912   26189   
+24                        David Cronenberg            96  120647   30641   
+25                      Christopher Landon            97  121126   22627   
+26                        Alfred Hitchcock           119  142324   28071   
+27                             Jim Sharman           100  152801   42127   
+28                            Bong Joon-ho           120   94684   22999   
+29                             James Whale            71   56120   12537   
+...                                    ...           ...     ...     ...   
+11022  Matt Bettinelli-Olpin,Tyler Gillett            95   99327   29268   
+11023                          Tobe Hooper            83  136625   35738   
+11024                 Nicolas Winding Refn           118  119487   25952   
+11025                       Brian De Palma            98  166484   37842   
+11026                       Panos Cosmatos           122   94906   29629   
+11027                          David Lynch            89  119893   33347   
+11028                           Gaspar Noé            97   93977   29098   
+11029                           Wes Craven           112  221682   51925   
+11030                      Julia Ducournau            99  113594   32493   
+11031                        Dario Argento            99  119652   39189   
+11032                            James Wan           112  260282   50594   
+11033                     Darren Aronofsky           121  224988   56581   
+11034                   M. Night Shyamalan           117  349996   80768   
+11035                      Jeremy Saulnier            95  144202   40768   
+11036                         Alex Garland           115  299348   82263   
+11037                      Robert Mulligan           108    2387     393   
+11038                          Mary Harron           102  356110   98205   
+11039                     Alfred Hitchcock           109  323090  101065   
+11040                      Andy Muschietti           135  446755  120070   
+11041                         Ridley Scott           117  379504  130782   
+11042                        Robert Eggers            92  265695   83771   
+11043                       John Krasinski            91  402513  123587   
+11044                     Steven Spielberg           124  354355   88582   
+11045                     Darren Aronofsky           108  431112  122378   
+11046                       Jonathan Demme           119  482939  161110   
+11047                         Jordan Peele           116  332487  104118   
+11048                            Ari Aster           127  339035  120900   
+11049                      Stanley Kubrick           144  535777  196151   
+11050                            Ari Aster           148  341172  119689   
+11051                        Robert Eggers           109  237969   93329   
+
+       avg_rating  half_star  one_star  one_half_star  two_star  \
+0             4.1        647      1560           1001      5727   
+1             3.6        477      1384           1353      6280   
+2             3.7        611      1253           1266      4151   
+3             4.0        204       700            602      3003   
+4             4.2        156       372            253      1326   
+5             3.5       1667      3498           2334      8653   
+6             3.8        197       432            493      2042   
+7             4.3        112       324            247      1339   
+8             4.0        296       865            618      3236   
+9             3.5       1151      2699           1937      7756   
+10            3.8        101       322            321      1297   
+11            3.6        267       771            779      3145   
+12            3.6        478      1413           1054      5599   
+13            3.6       1157      2594           1738      6986   
+14            4.1        177       378            294      1549   
+15            3.0       1921      4975           6252     18043   
+16            4.0         62       186            223      1004   
+17            3.2        372      1257           1345      5804   
+18            4.0        125       346            308      1302   
+19            3.5        612      1607           1207      4814   
+20            4.0         96       209            189       886   
+21            2.4       1783      5442           6442     15827   
+22            3.7        203       559            540      2764   
+23            3.6        106       294            423      1782   
+24            3.9        109       273            237      1263   
+25            3.1        995      2403           2304      7126   
+26            3.8        137       369            367      1949   
+27            3.8        471       953            696      2665   
+28            3.7        132       321            365      1569   
+29            3.9         18       108            117       537   
+...           ...        ...       ...            ...       ...   
+11022         3.5        267       643            879      3010   
+11023         3.9        270       778            614      2345   
+11024         3.2       1414      3028           2513      7489   
+11025         3.8        111       360            414      2008   
+11026         3.6        737      1442           1338      3791   
+11027         3.9        548       908            591      2083   
+11028         3.7        807      1382           1163      3181   
+11029         3.8        309       839            694      3475   
+11030         3.7        522       961            871      3078   
+11031         4.0        192       410            470      1829   
+11032         3.5        624      1697           1581      6831   
+11033         3.5       3884      5957           3686     10640   
+11034         3.5       1143      2891           2467     11186   
+11035         3.7        279       668            682      2961   
+11036         3.6        896      2851           2137     10419   
+11037         3.3         11        16             28       104   
+11038         3.9        429      1062            835      4515   
+11039         4.3         85       229            167      1161   
+11040         3.6       1479      4370           3101     14551   
+11041         4.3        146       442            299      1973   
+11042         3.8       1042      2425           1446      6307   
+11043         3.7        734      2304           2258      9928   
+11044         4.1        294       990            554      3792   
+11045         4.0        535      1369            865      5287   
+11046         4.3        148       365            259      1727   
+11047         3.7        837      2115           1949      9147   
+11048         4.0       1305      2702           1745      7234   
+11049         4.3        463      1016            610      3798   
+11050         3.8       1693      3468           2339      9381   
+11051         4.1        564      1182            849      3895   
+
+       two_half_star  three_star  three_half_star  four_star  four_half_star  \
+0               5821       34069            45053     136842           65726   
+1               9055       37228            43168      53117           10931   
+2               4844       12282            15033      25865           13732   
+3               3627       15715            17598      35627           14882   
+4               1412        6933             9562      27455           18616   
+5               8361       27352            29965      42989           13691   
+6               3575       14480            23999      39426           13629   
+7               1539        8292            12174      35860           24541   
+8               3889       19931            27603      62868           28324   
+9               7546       23758            24842      35887           11653   
+10              1924        6697             9194      15529            6787   
+11              5034       15713            24557      33844            9460   
+12              6696       30091            37364      52625           14010   
+13              7141       24204            29907      46109           15226   
+14              2260       11534            21547      49711           23046   
+15             20637       37407            25754      20352            4412   
+16              1304        6047             8327      17745            7706   
+17              7295       18015            14840      13474            3194   
+18              1532        6264             8380      17806            9305   
+19              5352       18060            18533      23605            5469   
+20              1169        5029             8052      20181           10345   
+21             13368       14833             6528       3652             513   
+22              3569       15795            16789      24096            5952   
+23              3084       12112            18354      21944            6022   
+24              1577        7645            11291      23265            9605   
+25              9040       23156            18020      13138            1998   
+26              2556       11232            13571      22950            7576   
+27              2863       10228            10743      19854            7185   
+28              2276        8945            14559      20985            6785   
+29               870        4364             5566       9959            3415   
+...              ...         ...              ...        ...             ...   
+11022           5146       16505            22454      22696            4998   
+11023           2472        9872            11035      20872           10552   
+11024           7447       14882            14003      16708            5880   
+11025           2631       13083            15993      27959            9097   
+11026           4271       10636            12995      20007            8697   
+11027           2157        7297             8954      19615           10182   
+11028           3410        8858            11461      20056           10829   
+11029           4061       18217            19408      34091           11385   
+11030           3511       11391            15594      25013            9926   
+11031           2445        8841            12005      23435           11885   
+11032           8008       27942            28230      39677            9928   
+11033           9280       22748            22806      38769           16117   
+11034          13693       47300            48606      57887           12596   
+11035           4037       14715            21956      33924           12614   
+11036          11144       35596            39784      62547           24869   
+11037            179         398              361        309              69   
+11038           5511       25762            34761      69640           26172   
+11039           1335       10300            13792      50703           33030   
+11040          15492       57592            55535      83814           20784   
+11041           1963       13696            17644      60265           38066   
+11042           5999       20950            27476      57322           26689   
+11043          11782       44464            50722      89334           29549   
+11044           3510       20468            21237      51850           23165   
+11045           4926       25690            27894      75092           34289   
+11046           1904       14691            20634      80047           51372   
+11047          11640       38583            45672      77956           29018   
+11048           7033       23889            29962      73713           45131   
+11049           3328       20073            22634      82486           52363   
+11050           9852       32192            40865      85561           38107   
+11051           4514       14861            21755      54557           38452   
+
+       five_star  
+0         110264  
+1          11907  
+2          12889  
+3          29077  
+4          24435  
+5          13942  
+6          14074  
+7          48856  
+8          36801  
+9          10256  
+10          7706  
+11          5891  
+12          9544  
+13         13608  
+14         28627  
+15          6040  
+16         11267  
+17          3190  
+18         14019  
+19          6725  
+20         10337  
+21           590  
+22          8505  
+23          3520  
+24          9909  
+25          2424  
+26          8487  
+27         15779  
+28          4050  
+29          4458  
+...          ...  
+11022       3944  
+11023      17382  
+11024       5409  
+11025      10915  
+11026       8800  
+11027      16363  
+11028      10248  
+11029      17828  
+11030       7962  
+11031      16067  
+11032      12230  
+11033      20259  
+11034      16507  
+11035       8875  
+11036      19059  
+11037         45  
+11038      30519  
+11039      63548  
+11040      27191  
+11041      81281  
+11042      30475  
+11043      34212  
+11044      49721  
+11045      51880  
+11046      92363  
+11047      29575  
+11048      55803  
+11049     123437  
+11050      42581  
+11051      50018  
+
+[11052 rows x 17 columns]
+>>> who
+>>> df = pd.read_csv('Horror.csv')
+>>> df.head()
+             title    year         director  running_time   views   likes  \
+0          Get Out  2017.0     Jordan Peele           104  605132  261668   
+1       Zombieland  2009.0  Ruben Fleischer            88  339357   77110   
+2         Suspiria  2018.0  Luca Guadagnino           152  122728   37820   
+3        Halloween  1978.0   John Carpenter            91  212751   59124   
+4  Rosemary's Baby  1968.0   Roman Polanski           137  158689   46272   
+
+   avg_rating  half_star  one_star  one_half_star  two_star  two_half_star  \
+0         4.1        647      1560           1001      5727           5821   
+1         3.6        477      1384           1353      6280           9055   
+2         3.7        611      1253           1266      4151           4844   
+3         4.0        204       700            602      3003           3627   
+4         4.2        156       372            253      1326           1412   
+
+   three_star  three_half_star  four_star  four_half_star  five_star  
+0       34069            45053     136842           65726     110264  
+1       37228            43168      53117           10931      11907  
+2       12282            15033      25865           13732      12889  
+3       15715            17598      35627           14882      29077  
+4        6933             9562      27455           18616      24435  
+>>> df.describe()
+               year  running_time          views          likes    avg_rating  \
+count  11046.000000  11052.000000   11052.000000   11052.000000  11052.000000   
+mean    1997.829712     83.197883    4344.529406     823.853782      2.810062   
+std       20.641835     28.903248   22098.558663    6153.743060      0.461166   
+min     1895.000000      1.000000      34.000000       0.000000      0.900000   
+25%     1986.000000     80.000000     104.000000      10.000000      2.500000   
+50%     2006.000000     89.000000     277.000000      31.000000      2.800000   
+75%     2014.000000     95.000000    1110.250000     148.000000      3.100000   
+max     2020.000000    608.000000  605132.000000  261668.000000      4.300000   
+
+          half_star      one_star  one_half_star      two_star  two_half_star  \
+count  11052.000000  11052.000000   11052.000000  11052.000000   11052.000000   
+mean      52.435215     99.525606      93.569399    234.609482     241.492038   
+std      237.354295    394.178772     345.956247    888.161944     899.024736   
+min        0.000000      0.000000       0.000000      0.000000       0.000000   
+25%        2.000000      5.000000       5.000000      9.000000       8.000000   
+50%        7.000000     13.000000      13.000000     25.000000      24.000000   
+75%       22.000000     40.000000      41.000000     93.000000      96.000000   
+max    10250.000000   9849.000000    6513.000000  18043.000000   20637.000000   
+
+         three_star  three_half_star      four_star  four_half_star  \
+count  11052.000000     11052.000000   11052.000000    11052.000000   
+mean     511.017101       422.037821     507.563156      169.017644   
+std     2229.331836      2211.361403    3773.986745     1676.276906   
+min        0.000000         0.000000       0.000000        0.000000   
+25%       11.000000         5.000000       3.000000        0.000000   
+50%       33.000000        17.000000      11.000000        2.000000   
+75%      157.000000        90.000000      61.000000       12.000000   
+max    57592.000000     55535.000000  136842.000000    65726.000000   
+
+           five_star  
+count   11052.000000  
+mean      214.110297  
+std      2646.450847  
+min         0.000000  
+25%         1.000000  
+50%         3.000000  
+75%        14.000000  
+max    123437.000000  
+>>> type(df)
+pandas.core.frame.DataFrame
+>>> df.info()
+>>> df.isna()
+       title   year  director  running_time  views  likes  avg_rating  \
+0      False  False     False         False  False  False       False   
+1      False  False     False         False  False  False       False   
+2      False  False     False         False  False  False       False   
+3      False  False     False         False  False  False       False   
+4      False  False     False         False  False  False       False   
+5      False  False     False         False  False  False       False   
+6      False  False     False         False  False  False       False   
+7      False  False     False         False  False  False       False   
+8      False  False     False         False  False  False       False   
+9      False  False     False         False  False  False       False   
+10     False  False     False         False  False  False       False   
+11     False  False     False         False  False  False       False   
+12     False  False     False         False  False  False       False   
+13     False  False     False         False  False  False       False   
+14     False  False     False         False  False  False       False   
+15     False  False     False         False  False  False       False   
+16     False  False     False         False  False  False       False   
+17     False  False     False         False  False  False       False   
+18     False  False     False         False  False  False       False   
+19     False  False     False         False  False  False       False   
+20     False  False     False         False  False  False       False   
+21     False  False     False         False  False  False       False   
+22     False  False     False         False  False  False       False   
+23     False  False     False         False  False  False       False   
+24     False  False     False         False  False  False       False   
+25     False  False     False         False  False  False       False   
+26     False  False     False         False  False  False       False   
+27     False  False     False         False  False  False       False   
+28     False  False     False         False  False  False       False   
+29     False  False     False         False  False  False       False   
+...      ...    ...       ...           ...    ...    ...         ...   
+11022  False  False     False         False  False  False       False   
+11023  False  False     False         False  False  False       False   
+11024  False  False     False         False  False  False       False   
+11025  False  False     False         False  False  False       False   
+11026  False  False     False         False  False  False       False   
+11027  False  False     False         False  False  False       False   
+11028  False  False     False         False  False  False       False   
+11029  False  False     False         False  False  False       False   
+11030  False  False     False         False  False  False       False   
+11031  False  False     False         False  False  False       False   
+11032  False  False     False         False  False  False       False   
+11033  False  False     False         False  False  False       False   
+11034  False  False     False         False  False  False       False   
+11035  False  False     False         False  False  False       False   
+11036  False  False     False         False  False  False       False   
+11037  False  False     False         False  False  False       False   
+11038  False  False     False         False  False  False       False   
+11039  False  False     False         False  False  False       False   
+11040  False  False     False         False  False  False       False   
+11041  False  False     False         False  False  False       False   
+11042  False  False     False         False  False  False       False   
+11043  False  False     False         False  False  False       False   
+11044  False  False     False         False  False  False       False   
+11045  False  False     False         False  False  False       False   
+11046  False  False     False         False  False  False       False   
+11047  False  False     False         False  False  False       False   
+11048  False  False     False         False  False  False       False   
+11049  False  False     False         False  False  False       False   
+11050  False  False     False         False  False  False       False   
+11051  False  False     False         False  False  False       False   
+
+       half_star  one_star  one_half_star  two_star  two_half_star  \
+0          False     False          False     False          False   
+1          False     False          False     False          False   
+2          False     False          False     False          False   
+3          False     False          False     False          False   
+4          False     False          False     False          False   
+5          False     False          False     False          False   
+6          False     False          False     False          False   
+7          False     False          False     False          False   
+8          False     False          False     False          False   
+9          False     False          False     False          False   
+10         False     False          False     False          False   
+11         False     False          False     False          False   
+12         False     False          False     False          False   
+13         False     False          False     False          False   
+14         False     False          False     False          False   
+15         False     False          False     False          False   
+16         False     False          False     False          False   
+17         False     False          False     False          False   
+18         False     False          False     False          False   
+19         False     False          False     False          False   
+20         False     False          False     False          False   
+21         False     False          False     False          False   
+22         False     False          False     False          False   
+23         False     False          False     False          False   
+24         False     False          False     False          False   
+25         False     False          False     False          False   
+26         False     False          False     False          False   
+27         False     False          False     False          False   
+28         False     False          False     False          False   
+29         False     False          False     False          False   
+...          ...       ...            ...       ...            ...   
+11022      False     False          False     False          False   
+11023      False     False          False     False          False   
+11024      False     False          False     False          False   
+11025      False     False          False     False          False   
+11026      False     False          False     False          False   
+11027      False     False          False     False          False   
+11028      False     False          False     False          False   
+11029      False     False          False     False          False   
+11030      False     False          False     False          False   
+11031      False     False          False     False          False   
+11032      False     False          False     False          False   
+11033      False     False          False     False          False   
+11034      False     False          False     False          False   
+11035      False     False          False     False          False   
+11036      False     False          False     False          False   
+11037      False     False          False     False          False   
+11038      False     False          False     False          False   
+11039      False     False          False     False          False   
+11040      False     False          False     False          False   
+11041      False     False          False     False          False   
+11042      False     False          False     False          False   
+11043      False     False          False     False          False   
+11044      False     False          False     False          False   
+11045      False     False          False     False          False   
+11046      False     False          False     False          False   
+11047      False     False          False     False          False   
+11048      False     False          False     False          False   
+11049      False     False          False     False          False   
+11050      False     False          False     False          False   
+11051      False     False          False     False          False   
+
+       three_star  three_half_star  four_star  four_half_star  five_star  
+0           False            False      False           False      False  
+1           False            False      False           False      False  
+2           False            False      False           False      False  
+3           False            False      False           False      False  
+4           False            False      False           False      False  
+5           False            False      False           False      False  
+6           False            False      False           False      False  
+7           False            False      False           False      False  
+8           False            False      False           False      False  
+9           False            False      False           False      False  
+10          False            False      False           False      False  
+11          False            False      False           False      False  
+12          False            False      False           False      False  
+13          False            False      False           False      False  
+14          False            False      False           False      False  
+15          False            False      False           False      False  
+16          False            False      False           False      False  
+17          False            False      False           False      False  
+18          False            False      False           False      False  
+19          False            False      False           False      False  
+20          False            False      False           False      False  
+21          False            False      False           False      False  
+22          False            False      False           False      False  
+23          False            False      False           False      False  
+24          False            False      False           False      False  
+25          False            False      False           False      False  
+26          False            False      False           False      False  
+27          False            False      False           False      False  
+28          False            False      False           False      False  
+29          False            False      False           False      False  
+...           ...              ...        ...             ...        ...  
+11022       False            False      False           False      False  
+11023       False            False      False           False      False  
+11024       False            False      False           False      False  
+11025       False            False      False           False      False  
+11026       False            False      False           False      False  
+11027       False            False      False           False      False  
+11028       False            False      False           False      False  
+11029       False            False      False           False      False  
+11030       False            False      False           False      False  
+11031       False            False      False           False      False  
+11032       False            False      False           False      False  
+11033       False            False      False           False      False  
+11034       False            False      False           False      False  
+11035       False            False      False           False      False  
+11036       False            False      False           False      False  
+11037       False            False      False           False      False  
+11038       False            False      False           False      False  
+11039       False            False      False           False      False  
+11040       False            False      False           False      False  
+11041       False            False      False           False      False  
+11042       False            False      False           False      False  
+11043       False            False      False           False      False  
+11044       False            False      False           False      False  
+11045       False            False      False           False      False  
+11046       False            False      False           False      False  
+11047       False            False      False           False      False  
+11048       False            False      False           False      False  
+11049       False            False      False           False      False  
+11050       False            False      False           False      False  
+11051       False            False      False           False      False  
+
+[11052 rows x 17 columns]
+>>> df.isna().sum
+<bound method DataFrame.sum of        title   year  director  running_time  views  likes  avg_rating  \
+0      False  False     False         False  False  False       False   
+1      False  False     False         False  False  False       False   
+2      False  False     False         False  False  False       False   
+3      False  False     False         False  False  False       False   
+4      False  False     False         False  False  False       False   
+5      False  False     False         False  False  False       False   
+6      False  False     False         False  False  False       False   
+7      False  False     False         False  False  False       False   
+8      False  False     False         False  False  False       False   
+9      False  False     False         False  False  False       False   
+10     False  False     False         False  False  False       False   
+11     False  False     False         False  False  False       False   
+12     False  False     False         False  False  False       False   
+13     False  False     False         False  False  False       False   
+14     False  False     False         False  False  False       False   
+15     False  False     False         False  False  False       False   
+16     False  False     False         False  False  False       False   
+17     False  False     False         False  False  False       False   
+18     False  False     False         False  False  False       False   
+19     False  False     False         False  False  False       False   
+20     False  False     False         False  False  False       False   
+21     False  False     False         False  False  False       False   
+22     False  False     False         False  False  False       False   
+23     False  False     False         False  False  False       False   
+24     False  False     False         False  False  False       False   
+25     False  False     False         False  False  False       False   
+26     False  False     False         False  False  False       False   
+27     False  False     False         False  False  False       False   
+28     False  False     False         False  False  False       False   
+29     False  False     False         False  False  False       False   
+...      ...    ...       ...           ...    ...    ...         ...   
+11022  False  False     False         False  False  False       False   
+11023  False  False     False         False  False  False       False   
+11024  False  False     False         False  False  False       False   
+11025  False  False     False         False  False  False       False   
+11026  False  False     False         False  False  False       False   
+11027  False  False     False         False  False  False       False   
+11028  False  False     False         False  False  False       False   
+11029  False  False     False         False  False  False       False   
+11030  False  False     False         False  False  False       False   
+11031  False  False     False         False  False  False       False   
+11032  False  False     False         False  False  False       False   
+11033  False  False     False         False  False  False       False   
+11034  False  False     False         False  False  False       False   
+11035  False  False     False         False  False  False       False   
+11036  False  False     False         False  False  False       False   
+11037  False  False     False         False  False  False       False   
+11038  False  False     False         False  False  False       False   
+11039  False  False     False         False  False  False       False   
+11040  False  False     False         False  False  False       False   
+11041  False  False     False         False  False  False       False   
+11042  False  False     False         False  False  False       False   
+11043  False  False     False         False  False  False       False   
+11044  False  False     False         False  False  False       False   
+11045  False  False     False         False  False  False       False   
+11046  False  False     False         False  False  False       False   
+11047  False  False     False         False  False  False       False   
+11048  False  False     False         False  False  False       False   
+11049  False  False     False         False  False  False       False   
+11050  False  False     False         False  False  False       False   
+11051  False  False     False         False  False  False       False   
+
+       half_star  one_star  one_half_star  two_star  two_half_star  \
+0          False     False          False     False          False   
+1          False     False          False     False          False   
+2          False     False          False     False          False   
+3          False     False          False     False          False   
+4          False     False          False     False          False   
+5          False     False          False     False          False   
+6          False     False          False     False          False   
+7          False     False          False     False          False   
+8          False     False          False     False          False   
+9          False     False          False     False          False   
+10         False     False          False     False          False   
+11         False     False          False     False          False   
+12         False     False          False     False          False   
+13         False     False          False     False          False   
+14         False     False          False     False          False   
+15         False     False          False     False          False   
+16         False     False          False     False          False   
+17         False     False          False     False          False   
+18         False     False          False     False          False   
+19         False     False          False     False          False   
+20         False     False          False     False          False   
+21         False     False          False     False          False   
+22         False     False          False     False          False   
+23         False     False          False     False          False   
+24         False     False          False     False          False   
+25         False     False          False     False          False   
+26         False     False          False     False          False   
+27         False     False          False     False          False   
+28         False     False          False     False          False   
+29         False     False          False     False          False   
+...          ...       ...            ...       ...            ...   
+11022      False     False          False     False          False   
+11023      False     False          False     False          False   
+11024      False     False          False     False          False   
+11025      False     False          False     False          False   
+11026      False     False          False     False          False   
+11027      False     False          False     False          False   
+11028      False     False          False     False          False   
+11029      False     False          False     False          False   
+11030      False     False          False     False          False   
+11031      False     False          False     False          False   
+11032      False     False          False     False          False   
+11033      False     False          False     False          False   
+11034      False     False          False     False          False   
+11035      False     False          False     False          False   
+11036      False     False          False     False          False   
+11037      False     False          False     False          False   
+11038      False     False          False     False          False   
+11039      False     False          False     False          False   
+11040      False     False          False     False          False   
+11041      False     False          False     False          False   
+11042      False     False          False     False          False   
+11043      False     False          False     False          False   
+11044      False     False          False     False          False   
+11045      False     False          False     False          False   
+11046      False     False          False     False          False   
+11047      False     False          False     False          False   
+11048      False     False          False     False          False   
+11049      False     False          False     False          False   
+11050      False     False          False     False          False   
+11051      False     False          False     False          False   
+
+       three_star  three_half_star  four_star  four_half_star  five_star  
+0           False            False      False           False      False  
+1           False            False      False           False      False  
+2           False            False      False           False      False  
+3           False            False      False           False      False  
+4           False            False      False           False      False  
+5           False            False      False           False      False  
+6           False            False      False           False      False  
+7           False            False      False           False      False  
+8           False            False      False           False      False  
+9           False            False      False           False      False  
+10          False            False      False           False      False  
+11          False            False      False           False      False  
+12          False            False      False           False      False  
+13          False            False      False           False      False  
+14          False            False      False           False      False  
+15          False            False      False           False      False  
+16          False            False      False           False      False  
+17          False            False      False           False      False  
+18          False            False      False           False      False  
+19          False            False      False           False      False  
+20          False            False      False           False      False  
+21          False            False      False           False      False  
+22          False            False      False           False      False  
+23          False            False      False           False      False  
+24          False            False      False           False      False  
+25          False            False      False           False      False  
+26          False            False      False           False      False  
+27          False            False      False           False      False  
+28          False            False      False           False      False  
+29          False            False      False           False      False  
+...           ...              ...        ...             ...        ...  
+11022       False            False      False           False      False  
+11023       False            False      False           False      False  
+11024       False            False      False           False      False  
+11025       False            False      False           False      False  
+11026       False            False      False           False      False  
+11027       False            False      False           False      False  
+11028       False            False      False           False      False  
+11029       False            False      False           False      False  
+11030       False            False      False           False      False  
+11031       False            False      False           False      False  
+11032       False            False      False           False      False  
+11033       False            False      False           False      False  
+11034       False            False      False           False      False  
+11035       False            False      False           False      False  
+11036       False            False      False           False      False  
+11037       False            False      False           False      False  
+11038       False            False      False           False      False  
+11039       False            False      False           False      False  
+11040       False            False      False           False      False  
+11041       False            False      False           False      False  
+11042       False            False      False           False      False  
+11043       False            False      False           False      False  
+11044       False            False      False           False      False  
+11045       False            False      False           False      False  
+11046       False            False      False           False      False  
+11047       False            False      False           False      False  
+11048       False            False      False           False      False  
+11049       False            False      False           False      False  
+11050       False            False      False           False      False  
+11051       False            False      False           False      False  
+
+[11052 rows x 17 columns]>
+>>> df.isna().sum()
+title               0
+year                6
+director           76
+running_time        0
+views               0
+likes               0
+avg_rating          0
+half_star           0
+one_star            0
+one_half_star       0
+two_star            0
+two_half_star       0
+three_star          0
+three_half_star     0
+four_star           0
+four_half_star      0
+five_star           0
+dtype: int64
+>>> df.isna((axis=1))
+>>> df.isna(axis=1)
+>>> df['title'][df['director'].isna()]
+1064                                      Harper's Island
+1274                             Todd McFarlane's Spawn 2
+1457                                    Silent Hills P.T.
+1638                                          Prai Takian
+1731                                    Tokyo Ghoul: Jack
+1752                    Boogeymen: The Killer Compilation
+1910                                                 Büyü
+2029                                  Traces of Death III
+2178             Trailer Trauma Part 4: Television Trauma
+2217                                    Night Night Nancy
+2224                                      No Through Road
+2227                      Traces of Death IV: Resurrected
+2232                                           After Dark
+2235                              The Ticket of Leave Man
+2247                                     Killer Christmas
+2384                                        Antoni Psycho
+2395                                Copiii: The 1st Entry
+2400                                      President's Day
+2448    The Very Best of Ghost Hunters: Vol. 1: Most B...
+2449                                        Aptharakshaka
+2462                                            The Stand
+2471                                        Rubber Johnny
+2474                                                 Stay
+2489                                    The Chicken Party
+2651                                           Crocodylus
+2738                                      Death on Demand
+2746                                          The Big Bad
+2762                 RiffTrax Live: Giant Spider Invasion
+2766                                                Slave
+2831                                        The Graveyard
+                              ...                        
+3517                             Silent Hill 2: The Movie
+3541                             Chucky's Vacation Slides
+3560                               Danger! 50,000 Zombies
+3749                                             Atrocity
+3822                Trailer Trauma 2: Drive-In Monsterama
+3823                                        Feed the Gods
+3832                                 Zombies & Cigarettes
+3844                                       Zombie Dearest
+3961                                  Extra Weird Sampler
+3990                          Bikini Bloodbath: Christmas
+4316                                     Volumes of Blood
+4402                                        Unseen Evil 2
+4425    Phineas and Ferb: Night of the Living Pharmacists
+4457                         The Russian Sleep Experiment
+4580                       Satanic Cults and Ritual Crime
+4647                                         Shark Hunter
+4667                                   Tokyo Ghoul: Pinto
+4681                                   Little Corey Gorey
+4949                           Hellsing Ultimate The Dawn
+5057                                       Trailer Trauma
+5352                             Pro Wrestlers vs Zombies
+5585                               Rocky Horror Show Live
+5684                               Murder Death Koreatown
+5962        Todd McFarlane's Spawn 3: The Ultimate Battle
+6056                                  Hellsing Ultimate X
+6272                                        Meet the Pyro
+6609                               Hellsing Ultimate VIII
+6839                                 Hellsing Ultimate IV
+8155                                  Hellsing Ultimate I
+8174                          Are You Afraid of the Dark?
+Name: title, Length: 76, dtype: object
+>>> df['title'][df['year'].isna()]
+2400                                      President's Day
+2448    The Very Best of Ghost Hunters: Vol. 1: Most B...
+2454                                        Silent Breath
+2506                            The Golden Arm (Michigan)
+2638                                                 Shed
+2664                                Frozen 2: Even Better
+Name: title, dtype: object
+>>> df[df['year'].isna()]
+                                                  title  year      director  \
+2400                                    President's Day   NaN           NaN   
+2448  The Very Best of Ghost Hunters: Vol. 1: Most B...   NaN           NaN   
+2454                                      Silent Breath   NaN     Josh mabe   
+2506                          The Golden Arm (Michigan)   NaN     Sam Raimi   
+2638                                               Shed   NaN     David Axe   
+2664                              Frozen 2: Even Better   NaN  Haydn Elmore   
+
+      running_time  views  likes  avg_rating  half_star  one_star  \
+2400            90     40      6         3.1          1         3   
+2448           120     39      2         3.2          1         3   
+2454            20     47     24         3.0          2         3   
+2506            30     43      6         3.1          0         2   
+2638            82     40      6         2.9          1         6   
+2664             3     50      6         3.2          7         5   
+
+      one_half_star  two_star  two_half_star  three_star  three_half_star  \
+2400              4         5              4           9                5   
+2448              1         3              2           7                2   
+2454              6         5              7          14                4   
+2506              3         7              7           6                3   
+2638              4         6              5           8                1   
+2664              2         1              1           2                3   
+
+      four_star  four_half_star  five_star  
+2400          1               1          2  
+2448          5               1          2  
+2454          3               2          1  
+2506          2               0          1  
+2638          1               0          1  
+2664          3               5          7  
+>>> history
+>>> history -o
+>>> history -o -p
+>>> history -o -p -f "EDA.ipy"
