@@ -21,6 +21,14 @@ genre and ratings
     - fairly accurate with a standard error of ~0.445
     - genre is a feature variable, avg_rating is a float
     - linear regression model
+    
+Runtime and ratings - continuous 
+
+one stars and five stars vs rating *controversial films*
+
+views/likes and rating
+
+
 
     
 
