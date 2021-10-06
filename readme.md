@@ -28,13 +28,13 @@ CONCLUSIONS
 
 Past experiments:
 
-directors and ratings
+>directors and ratings
     - linear regression model
     - directors as features and ratings as target variable, 6000 features not helpful for model
     - dimensionality problem, good on directors its seen but not ones it hasn't, too many features
 
 
-year and ratings
+>year and ratings
     - linear regression model
     - year as a feature, ratings as target variable
     - little correlation, model score of 0.068
