@@ -34,10 +34,5 @@ Past experiments:
     - dimensionality problem, good on directors its seen but not ones it hasn't, too many features
 
 
->year and ratings
-    - linear regression model
-    - year as a feature, ratings as target variable
-    - little correlation, model score of 0.068
-
     
     
