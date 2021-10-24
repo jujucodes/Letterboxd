@@ -28,6 +28,9 @@ I used Andres Hernandez’s Letterboxd dataset scraped from the website and avai
 
 The number of films in each genre varied widely, which explains animation, scifi and war films having a higher number of average ratings. 
 
+![plot](genre_countplot.png)
+
+
 ### Data Wrangling and Cleaning
 
 The data contains some null values in the director and year columns. I chose to fill the missing director values with ‘directorNA’ in order to keep track of the missing values. In terms of the missing year values, I created a new column ‘year_isna’ with Boolean values, and filled the null values with 0. 
@@ -38,7 +41,12 @@ I also experimented with using the directors variable as a feature by using indi
 
 As part of my experiments, I also trained several models including views and likes with the other features. 
 
+![plot](leakage_gb_features.png)
+
 This resulted in the best accuracy of any of the models, with a model score on unseen dating achieving 0.65 accuracy and an RMSE of 0.28 with a Gradient Boosting Regressor and an accuracy of 0.646 with an RMSE of 0.28 for KNeighbors Regressor. Decision Tree beat Linear and Ridge Regression, however it overfit to the data with a training set accuracy of 0.99 and a test set accuracy of only 0.52, lower than Gradient Boosting and KNeighbors Regressor. Below is a comparison of models trained on all the numeric data including views and likes.
+
+![plot](leakage_model_acc.png)
+![plot](leakage_model_rmse.png)
 
 However, these features are giveaway features, as stakeholders would not know the likes and views of their film before it is released. These features are the most important to the Gradient Boosting Regressor because likes and views are highly correlated with higher rated films. While these models have the impressive accuracy for the dataset, these are not useful for the problem at hand. For stakeholders who want to know how to market and release their film, these features are useless as these numbers are difficult to estimate until the film is actually released. 
 
@@ -46,6 +54,8 @@ However, these features are giveaway features, as stakeholders would not know th
 ### NLP on Title Length
 
 One interesting feature I explored is the length of films’ titles. I used Natural Language Processing techniques to extract the length of characters in each title and created a new feature, title_len. Length is lightly correlated to the average rating and longer titles tend to have slightly higher ratings.
+
+![plot](title_len_plot.png)
 
 Adding this feature to the existing models improved accuracy. 
 
@@ -58,12 +68,33 @@ Gradient Boosting Regression with title length in addition to the other numeric 
 
 The Linear Regression model also proves useful as a simpler model with faster training time that gives insights into how the various features influence the final result. 
 
+>title_len       0.001826
+
+>year           -0.000926
+
+>running_time    0.000154
+
+>animation       0.186528
+
+>horror         -0.208405
+
+>scifi          -0.130003
+
+>thriller       -0.080630
+
+>war             0.232510
+
 When comparing the accuracy and RMSE of regression models I tried, Gradient Boosting Regression and KNeighbors Regression models stand out. 
+
+![plot](model_acc.png)
+![plot](model_rmse.png)
 
 
 ### Takeaways
 
 While the model isn’t accurate enough to give a confident prediction of an average rating for a film yet to be released, it can be useful for stakeholders interested in what features influence the ratings of their films. While some features like year can’t be changed with the release of a film, considering genre, such as choosing to release a film as a thriller instead of horror. 
+
+![plot](genre_avg_rating.png)
 
 Stakeholders could also consider the length of the title’s name, as longer titles tend to get slightly higher average ratings. 
 
