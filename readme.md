@@ -11,12 +11,19 @@ When releasing a new film, it’s a good consideration for stakeholders to inves
 I used Andres Hernandez’s Letterboxd dataset scraped from the website and available through Kaggle. The data is in CSV format with five files for the genres Animation, Horror, SciFi, Thriller and War. Each file included the features:
 
 > Title – title of the film
+
 > Year – year the film was released
+
 > Director
+
 > Running_time in minutes
+
 > Views – number of people who have viewed the film on Letterboxd
+
 > Likes – number of people who have liked the film on Letterboxd
+
 > Avg_rating – average rating of the film given by users on Letterboxd
+
 > Half_star, One_star, One_half_star, Two_star, Two_half_star, Three_star, Three_half_star, Four_star, Four_half_star, Five_star – number of people who gave a certain rating to a film useful to see if a film is “controversial,” i.e. has a large number of high and low ratings. 
 
 The number of films in each genre varied widely, which explains animation, scifi and war films having a higher number of average ratings. 
