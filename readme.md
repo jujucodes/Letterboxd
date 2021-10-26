@@ -102,7 +102,9 @@ While all of these features have a relatively small impact on a film’s ratings
 
 
 
-### Hyperparameter Table
+### Hyperparameter Table 
+
+![plot](acc_table.png)
 
 | Model        | Features           | Training Set Model Score  | Testing Set Model Score | RMSE | Data Types |
 | ------------- |:-------------:| -----:| ---: | ---: | ---: | 
