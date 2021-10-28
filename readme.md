@@ -4,7 +4,7 @@
 
 ### Problem Statement
 
-When releasing a new film, it’s a good consideration for stakeholders to investigate how difference audiences will respond, especially avid film fans who are more likely to review and share films. Letterboxd is a social network for film reviewers, increasingly popular with critics and movie fans alike with an audience skewed towards young adults, a critical demographic. Letterboxd allows users to rate films from 0 – 5 stars and mark a film as “liked” or “viewed,” valuable insights into the popularity, or controversiality, of a film. When examining the most important features in predicting the average rating of a film on Letterboxd, what can these insights reveal about what stakeholders should consider when marketing and releasing a film? 
+When releasing a new film, it’s a good consideration for stakeholders to investigate how different audiences will respond, especially avid film fans who are more likely to review and share films. Letterboxd is a social network for film reviewers, increasingly popular with critics and movie fans alike with an audience skewed towards young adults, a critical demographic. Letterboxd allows users to rate films from 0 – 5 stars and mark a film as “liked” or “viewed,” valuable insights into the popularity, or controversiality, of a film. When examining the most important features in predicting the average rating of a film on Letterboxd, what can these insights reveal about what stakeholders should consider when marketing and releasing a film? 
 
 ### Data and EDA
 
